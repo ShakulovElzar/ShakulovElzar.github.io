@@ -1,0 +1,25 @@
+.main{
+    grid-area: n;
+    background: cornflowerblue;
+    padding: 15px;
+    height: 600px;
+}
+
+.list{
+    line-height: 25px;
+}
+
+.item{
+    color: inherit;
+    display: block;
+    transition: all .3s ease;
+    width: 175px;
+}
+
+.item:hover{
+    color: #ffffff;
+}
+
+.item:focus{
+    color: #ffffff;
+}

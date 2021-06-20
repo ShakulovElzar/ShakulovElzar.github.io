@@ -1,0 +1,22 @@
+.content{
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+}
+
+.item{
+    display: flex;
+    height: 50px;
+    width: 250px;
+    align-items: center;
+    color: inherit;
+
+    padding: 15px;
+}
+
+.item:focus{
+    background: bisque;
+}
+
+.chat{
+    overflow: auto;
+}

@@ -1,0 +1,5 @@
+.main{
+    grid-area: c;
+    background: coral;
+    padding: 15px;
+}
