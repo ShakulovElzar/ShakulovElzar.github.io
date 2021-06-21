@@ -6,7 +6,7 @@ export default function Header() {
         <header className={s.header}>
             <div className={s.wrapper}>
                 <img className={s.logo} src="https://image.flaticon.com/icons/png/512/23/23338.png" alt="logo"/>
-                <span>Hello, let's try it!</span>
+                <span className={s.info}>Hello, let's try it!</span>
             </div>
         </header>
     );

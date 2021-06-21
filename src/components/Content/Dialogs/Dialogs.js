@@ -1,30 +1,28 @@
 import React from "react";
-import s from "./DIalogs.module.css";
-import {NavLink} from "react-router-dom";
-
-const DialogItem = (props) => {
-    return (
-        <NavLink className={s.item} to={"/dialogs/" + props.id}><h2>{props.name}</h2></NavLink>
-    )
-}
-
-const Message = (props) => {
-    return <div className={s.message}>{props.text}</div>
-}
+import s from "./Dialogs.module.css";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
+import {Redirect} from "react-router-dom";
 
 export default function Dialogs() {
-    const dialogsData = [
+    const dialogs = [
         {id: 1, name: "Dima"},
         {id: 2, name: "Sasha"},
         {id: 3, name: "Masha"},
         {id: 4, name: "Vova"},
     ]
 
-    const messagesData = [
+    const DialogsElements = dialogs.map(el => <DialogItem id={el.id} name={el.name} />)
+
+    const messages = [
         {id: 1, text: "Hi"},
         {id: 2, text: "What's up?"},
         {id: 3, text: "Yo, amazing!"},
     ]
+
+    const messagesElements = messages.map(el => <Message id={el.id} text={el.text} />)
+
+
 
     return (
         <div className={s.main}>
@@ -32,14 +30,11 @@ export default function Dialogs() {
 
             <div className={s.content}>
                 <div className={s.list}>
-                    <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+                    {DialogsElements}
+                    <Redirect from="/Dialogs/" to="/Dialogs/1"/>
                 </div>
                 <div className={s.chat}>
-                    <div className={s.messages}>
-                        <Message text="Hi"/>
-                        <Message text="What's up?"/>
-                        <Message text="Yo, amazing!"/>
-                    </div>
+                    {messagesElements}
                 </div>
             </div>
         </div>

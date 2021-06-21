@@ -13,7 +13,7 @@
     padding: 15px;
 }
 
-.item:focus{
+.item.active{
     background: bisque;
 }
 

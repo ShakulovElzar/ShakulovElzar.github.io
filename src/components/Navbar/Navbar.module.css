@@ -10,16 +10,14 @@
 }
 
 .item{
-    color: inherit;
+    color: #000000;
     display: block;
     transition: all .3s ease;
     width: 175px;
+    text-decoration: none;
 }
 
-.item:hover{
-    color: #ffffff;
-}
-
-.item:focus{
+.item:hover,
+.item.activeLink{
     color: #ffffff;
 }

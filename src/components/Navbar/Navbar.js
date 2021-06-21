@@ -6,11 +6,11 @@ export default function Navbar() {
     return (
         <div className={s.main}>
             <div className={s.list}>
-                <h2><NavLink className={s.item} to="/Profile">Profile</NavLink></h2>
-                <h2><NavLink className={s.item} to="/Dialogs">Dialogs</NavLink></h2>
-                <h2><NavLink className={s.item} to="/News">News</NavLink></h2>
-                <h2><NavLink className={s.item} to="/Music">Music</NavLink></h2>
-                <h2><NavLink className={s.item} to="/Settings">Settings</NavLink></h2>
+                <h2><NavLink className={s.item} activeClassName={s.activeLink} to="/Profile">Profile</NavLink></h2>
+                <h2><NavLink className={s.item} activeClassName={s.activeLink} to="/Dialogs">Dialogs</NavLink></h2>
+                <h2><NavLink className={s.item} activeClassName={s.activeLink} to="/News">News</NavLink></h2>
+                <h2><NavLink className={s.item} activeClassName={s.activeLink} to="/Music">Music</NavLink></h2>
+                <h2><NavLink className={s.item} activeClassName={s.activeLink} to="/Settings">Settings</NavLink></h2>
             </div>
         </div>
     );
