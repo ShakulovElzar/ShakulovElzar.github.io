@@ -3,6 +3,12 @@
     grid-template-columns: 4fr 10fr;
 }
 
+.avatar{
+    width: 50px;
+    height: 50px;
+    margin-right: 25px;
+}
+
 .item{
     display: flex;
     height: 50px;
@@ -20,4 +26,25 @@
 
 .chat{
     overflow: auto;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 400px;
+    padding-bottom: 10px;
+}
+
+.chatWrapper{
+    margin-top: 10px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+    width: 650px;
+}
+
+.message{
+    padding: 10px 15px;
+    background: bisque;
+    border-radius: 5px;
 }

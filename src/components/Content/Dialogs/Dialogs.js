@@ -1,28 +1,14 @@
 import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
-import Message from "./Message/Message";
+import Chat from "./Chat/Chat";
 import {Redirect} from "react-router-dom";
 
-export default function Dialogs() {
-    const dialogs = [
-        {id: 1, name: "Dima"},
-        {id: 2, name: "Sasha"},
-        {id: 3, name: "Masha"},
-        {id: 4, name: "Vova"},
-    ]
+export default function Dialogs(props) {
 
-    const DialogsElements = dialogs.map(el => <DialogItem id={el.id} name={el.name} />)
+    const DialogsElements = props.state.dialogs.map(el => <DialogItem avatarLink={el.avatarLink} id={el.id} name={el.name}/>)
 
-    const messages = [
-        {id: 1, text: "Hi"},
-        {id: 2, text: "What's up?"},
-        {id: 3, text: "Yo, amazing!"},
-    ]
-
-    const messagesElements = messages.map(el => <Message id={el.id} text={el.text} />)
-
-
+    const DisplayChats = props.state.messages.map((item, i) => <Chat id={i} item={item}/>)
 
     return (
         <div className={s.main}>
@@ -34,7 +20,7 @@ export default function Dialogs() {
                     <Redirect from="/Dialogs/" to="/Dialogs/1"/>
                 </div>
                 <div className={s.chat}>
-                    {messagesElements}
+                    {DisplayChats}
                 </div>
             </div>
         </div>

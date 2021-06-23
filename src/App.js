@@ -4,13 +4,13 @@ import {BrowserRouter} from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Content from "./components/Content/Content";
 
-function App() {
+function App(props) {
     return (
         <BrowserRouter>
             <div className="App">
                 <Header/>
-                <Navbar/>
-                <Content/>
+                <Navbar state={props.state.sidebar}/>
+                <Content state={props.state}/>
             </div>
         </BrowserRouter>
     );

@@ -7,14 +7,14 @@ import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 
-export default function Content() {
+export default function Content(props) {
     return (
         <div className={s.main}>
-            <Route path="/profile" component={Profile}/>
-            <Route path="/Dialogs" component={Dialogs}/>
-            <Route path="/News" component={News}/>
-            <Route path="/Music" component={Music}/>
-            <Route path="/Settings" component={Settings}/>
+            <Route path="/profile" render={() => <Profile state={props.state.profilePage}/>}/>
+            <Route path="/Dialogs" render={() => <Dialogs state={props.state.dialogsPage} />}/>
+            <Route path="/News" render={() => <News/>}/>
+            <Route path="/Music" render={() => <Music/>}/>
+            <Route path="/Settings" render={() => <Settings/>}/>
             <Redirect from='/' to='/Profile'/>
         </div>
     );

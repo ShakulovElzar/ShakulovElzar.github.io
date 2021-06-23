@@ -21,3 +21,26 @@
 .item.activeLink{
     color: #ffffff;
 }
+
+
+.friends{
+    margin-top: 100px;
+}
+
+.friendsRow {
+    display: flex;
+    grid-gap: 10px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+.friendsName{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+}

@@ -2,15 +2,9 @@ import React from "react";
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-export default function MyPosts() {
-    const posts = [
-        {id: 1, text: "Hi, how are you", likes: 12},
-        {id: 2, text: "Hey there", likes: 32},
-        {id: 3, text: "I won", likes: 124},
-        {id: 4, text: "I did my first job", likes: 2},
-    ]
+export default function MyPosts(props) {
 
-    const postElements = posts.map(el => <Post id={el.id} text={el.text} likes={el.likes} />)
+    const postElements = props.posts.map(el => <Post id={el.id} text={el.text} likes={el.likes} />)
 
     return (
         <div className={s.main}>
