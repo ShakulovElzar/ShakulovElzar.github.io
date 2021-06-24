@@ -1,20 +1,22 @@
+import {rerenderEntireTree} from "../rerenderEntireTree";
+
 const state = {
     profilePage: {
-        posts : [
-    {id: 1, text: "Hi, how are you", likes: 12},
-    {id: 2, text: "Hey there", likes: 32},
-    {id: 3, text: "I won", likes: 124},
-    {id: 4, text: "I did my first job", likes: 2}
-]
+        posts: [
+            {id: 1, text: "Hi, how are you", likes: 12},
+            {id: 2, text: "Hey there", likes: 32},
+            {id: 3, text: "I won", likes: 124},
+            {id: 4, text: "I did my first job", likes: 2}
+        ]
     },
     dialogsPage: {
-        dialogs : [
-            {id: 1, name: "Dima", avatarLink: "https://image.flaticon.com/icons/png/128/168/168899.png"},
-            {id: 2, name: "Sasha", avatarLink: "https://image.flaticon.com/icons/png/128/168/168874.png"},
+        dialogs: [
+            {id: 1, name: "Dima", avatarLink: "https://image.flaticon.com/icons/png/128/168/168874.png"},
+            {id: 2, name: "Sasha", avatarLink: "https://image.flaticon.com/icons/png/128/168/168870.png"},
             {id: 3, name: "Masha", avatarLink: "https://image.flaticon.com/icons/png/128/168/168883.png"},
-            {id: 4, name: "Vova", avatarLink: "https://image.flaticon.com/icons/png/128/168/168888.png"},
+            {id: 4, name: "Vova", avatarLink: "https://image.flaticon.com/icons/png/128/168/168881.png"},
         ],
-        messages : [
+        messages: [
             [
                 {id: 0, text: "Hi"},
                 {id: 1, text: "What's up?"},
@@ -62,6 +64,16 @@ const state = {
             }
         ]
     }
+}
+
+export const addPost = (postText) => {
+    let post = {
+        id: state.profilePage.posts.length - 2,
+        text: postText,
+        likes: 0
+    }
+    state.profilePage.posts.unshift(post)
+    rerenderEntireTree(state);
 }
 
 export default state;

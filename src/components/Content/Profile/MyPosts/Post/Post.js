@@ -5,7 +5,7 @@ export default function Post(props){
     return (
       <div className={s.main}>
           <div>
-              <img className={s.avatar} src="avatar.jpg" alt="your avatar"/>
+              <img className={s.logo} src="https://image.flaticon.com/icons/png/128/168/168868.png" alt="your avatar"/>
           </div>
           <div>
               <span className={s.text}>{props.text}</span>

@@ -6,3 +6,19 @@
     margin-top: 50px;
     margin-left: 15px;
 }
+
+.form{
+    display: flex;
+    align-items: center;
+}
+
+.textarea {
+    resize: none;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.button{
+    width: 100px;
+    height: 40px;
+}
