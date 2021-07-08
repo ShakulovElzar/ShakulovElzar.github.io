@@ -9,7 +9,7 @@ function App(props) {
             <div className="App">
                 <Header/>
                 <Navbar state={props.state.sidebar}/>
-                <Content addPost={props.addPost} state={props.state}/>
+                <Content store={props.store}/>
             </div>
 
     );

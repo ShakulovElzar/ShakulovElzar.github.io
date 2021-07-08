@@ -8,10 +8,13 @@ export default function MyPosts(props) {
 
     let textAreaTarget = React.createRef();
 
-    let addPost = () => {
+    let onAddPost = () => {
+        props.addPost();
+    }
+
+    let onAreaChange = () => {
         let text = textAreaTarget.current.value;
-        props.addPost(text);
-        textAreaTarget.current.value = "";
+        props.updateTextArea(text);
     }
 
     return (
@@ -19,15 +22,13 @@ export default function MyPosts(props) {
             <h2>My posts:</h2>
             <div className={s.form}>
                 <textarea
-                    onChange={(evt) => {
-                        console.log("you have typed: ", evt.target.value)
-                    }}
+                    onChange={onAreaChange}
                     ref={textAreaTarget}
                     className={s.textarea}
-                    placeholder="Write your post here"
+                    value={props.areaText}
                     name="area" id="postText" cols="100" rows="5"
                 />
-                <button onClick={addPost} className={s.button}>Add post</button>
+                <button onClick={onAddPost} className={s.button}>Add post</button>
             </div>
             <div className={s.list}>
                 {postElements}

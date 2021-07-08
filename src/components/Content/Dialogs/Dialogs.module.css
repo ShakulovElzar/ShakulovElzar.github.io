@@ -1,15 +1,15 @@
-.content{
+.content {
     display: grid;
     grid-template-columns: 4fr 10fr;
 }
 
-.avatar{
+.avatar {
     width: 50px;
     height: 50px;
     margin-right: 25px;
 }
 
-.item{
+.item {
     display: flex;
     height: 50px;
     width: 250px;
@@ -20,31 +20,52 @@
     padding: 15px;
 }
 
-.item.active{
+.item.active {
     background: bisque;
 }
 
-.chat{
-    overflow: auto;
-    padding-left: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    height: 400px;
-    padding-bottom: 10px;
+.chat {
+    margin: 10px 50px;
+
+    position: relative;
+    height: 500px;
 }
 
-.chatWrapper{
-    margin-top: 10px;
-    margin-right: 50px;
+.chatWrapper {
     display: flex;
     flex-direction: column;
     grid-gap: 40px;
+
     width: 650px;
+    height: 370px;
+    padding: 25px 5px;
+
+    position: absolute;
+    overflow: auto;
 }
 
-.message{
+.message {
     padding: 10px 15px;
     background: bisque;
     border-radius: 5px;
+}
+
+/* Block with send form */
+
+.sendBlock{
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    grid-gap: 20px;
+}
+
+.textarea {
+    resize: none;
+    padding: 10px;
+}
+
+.send {
+    width: 75px;
+    height: 30px;
 }
